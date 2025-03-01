@@ -1,692 +1,889 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-    <title>Luking Li</title>
-    <meta content="Luking Li, https://github/liai" name="keywords">
-    <style media="screen" type="text/css">
-        html,
-        body,
-        div,
-        span,
-        applet,
-        object,
-        iframe,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p,
-        blockquote,
-        pre,
-        a,
-        abbr,
-        acronym,
-        address,
-        big,
-        cite,
-        code,
-        del,
-        dfn,
-        em,
-        font,
-        img,
-        ins,
-        kbd,
-        q,
-        s,
-        samp,
-        small,
-        strike,
-        strong,
-        sub,
-        tt,
-        var,
-        dl,
-        dt,
-        dd,
-        ol,
-        ul,
-        li,
-        fieldset,
-        form,
-        label,
-        legend,
-        table,
-        caption,
-        tbody,
-        tfoot,
-        thead,
-        tr,
-        th,
-        td {
-            border: 0pt none;
-            font-family: Times New Roman;
-            font-size: 100%;
-            font-style: inherit;
-            font-weight: inherit;
-            margin: 0pt;
-            outline-color: invert;
-            outline-style: none;
-            outline-width: 0pt;
-            padding: 0pt;
-            vertical-align: baseline;
-        }
-
-        a {
-            color: #1772d0;
-            text-decoration: none;
-        }
-
-        a:focus,
-        a:hover {
-            color: #f09228;
-            text-decoration: none;
-        }
-
-        a.paper {
-            font-weight: bold;
-            font-size: 12pt;
-        }
-
-        b.paper {
-            font-weight: bold;
-            font-size: 12pt;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lujun Li | Personal Homepage</title>
+    <meta content="Lujun Li, https://github/liai" name="keywords">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1772d0;
+            --secondary-color: #f09228;
+            --bg-color: #f5f7fa;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --border-color: #e0e0e0;
+            --highlight: #1772d0;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         }
 
         * {
-            margin: 0pt;
-            padding: 0pt;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
             position: relative;
-            margin: 3em auto 2em auto;
-            width: 800px;
-            font-family: Times New Roman;
-            font-size: 14px;
-            background: #eee;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: #333;
+            margin: 1rem 0;
+            font-weight: 600;
         }
 
         h2 {
-            font-family: Times New Roman;
-            font-size: 15pt;
-            font-weight: 700;
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--highlight);
+            padding-bottom: 0.3rem;
+            display: inline-block;
+            margin-bottom: 1.5rem;
         }
 
         h3 {
-            font-family: Times New Roman;
-            font-size: 16px;
-            font-weight: 700;
+            font-size: 1.4rem;
         }
 
-        strong {
-            font-family: Times New Roman;
-            font-size: 13px;
-            font-weight: bold;
+        h4 {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        p, li {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--highlight);
+        }
+
+        .profile-info {
+            flex-grow: 1;
+        }
+
+        .profile-name {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .profile-title {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            margin-top: 1rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-info i {
+            color: var(--highlight);
+            width: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: var(--highlight);
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+
+        .paper {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+
+        .paper-image {
+            width: 200px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+
+        .paper-content {
+            flex-grow: 1;
+        }
+
+        .paper-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .paper-authors {
+            margin-bottom: 0.5rem;
+        }
+
+        .paper-venue {
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+
+        .paper-alert {
+            color: #e74c3c;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .paper-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .paper-links a {
+            padding: 0.3rem 0.8rem;
+            background-color: #f5f7fa;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .paper-links a:hover {
+            background-color: #e0e5ed;
+        }
+
+        .paper-abstract {
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
         }
 
         ul {
-            list-style: circle;
+            list-style: none;
+            padding-left: 1.5rem;
         }
 
-        img {
-            border: none;
+        ul li {
+            position: relative;
+            margin-bottom: 0.8rem;
         }
 
-        li {
-            padding-bottom: 0.5em;
-            margin-left: 1.4em;
-        }
-
-        alert {
-            font-family: Times New Roman;
-            font-size: 13px;
+        ul li::before {
+            content: "•";
+            color: var(--highlight);
             font-weight: bold;
-            color: #FF0000;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+            
+            .paper {
+                flex-direction: column;
+            }
+            
+            .paper-image {
+                width: 100%;
+                height: auto;
+                max-height: 180px;
+            }
         }
 
-        em,
-        i {
-            font-style: italic;
+        .highlight {
+            color: var(--highlight);
+            font-weight: 600;
         }
 
-        div.section {
-            clear: both;
-            margin-bottom: 1.5em;
-            background: #eee;
+        .news-item {
+            margin-bottom: 0.8rem;
+            display: flex;
         }
 
-        div.spanner {
-            clear: both;
+        .news-date {
+            font-weight: 600;
+            color: var(--highlight);
+            min-width: 100px;
         }
 
-        div.paper {
-            clear: both;
-            margin-top: 0.5em;
-            margin-bottom: 1em;
-            border: 1px solid #ddd;
-            background: #fff;
-            padding: 1em 1em 1em 1em;
+        .map-container {
+            height: 350px;
+            width: 100%;
+            margin-top: 1rem;
+            overflow: hidden;
+            border-radius: 12px;
         }
 
-        div.paper div {
-            padding-left: 230px;
+        .visitor-info {
+            margin-top: 1rem;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
         }
 
-        img.paper {
-            margin-bottom: 0.5em;
-            float: left;
-            width: 200px;
+        .visitor-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 1rem;
+            flex-grow: 1;
+            min-width: 150px;
+            box-shadow: var(--shadow);
+            text-align: center;
         }
 
-        span.blurb {
-            font-style: italic;
-            display: block;
-            margin-top: 0.75em;
-            margin-bottom: 0.5em;
+        .visitor-value {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--highlight);
         }
 
-        pre,
-        code {
-            font-family: 'Lucida Console', 'Andale Mono', 'Courier', monospaced;
-            margin: 1em 0;
-            padding: 0;
-        }
-
-        div.paper pre {
-            font-size: 0.9em;
+        .visitor-label {
+            font-size: 0.9rem;
+            color: #666;
         }
     </style>
-
-    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
-          type="text/css"/>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164510176-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'UA-164510176-1');
     </script>
-
 </head>
 
-
 <body>
-<div style="margin-bottom: 1em; border: 1px solid #ddd; background-color: #fff; padding: 1em; height: 130px;">
-    <div style="margin: 0px auto; width: 100%;">
-        <img title="implus" style="float: left; padding-left: .01em; height: 110px;"
-             src="./lujunli.jpg">
-        <div style="padding-left: 12em; vertical-align: top; height: 120px;">
-            <span style="line-height: 150%; font-size: 20pt;">Lujun LI (李路军)</span><br>
-            <span> Hong Kong University of Science and Technology (HKUST)</span><br>
-<span><strong>Address</strong>: Clear Water Bay Peninsula, New Territories, Hong Kong</span><br>
-            <span><strong>Email</strong>: lilujunai@gmail.com, lliee@ust.hk </span> <br>
-                     <span> <a href="https://openreview.net/profile?id=~Lujun_Li1">Openreview</a></span> <br>
-            <span> <a href="https://scholar.google.com/citations?hl=en&user=aPl3DjIAAAAJ&view_op=list_works&gmla=AJsN-F6PzWqNjlzy8OapYAJ7NBWh_vlvN_-G0boZwefvxSkVZAlxhoFnfcO7yhvjQzM8qSmFKDsaTnULJLHvRzDpIqfgabOt9FmyBOaHz_hcjDMdRy47Ois">Google Scholar</a></span><br>
-                  
-            <span> <a href=" https://github.com/lliai">GitHub</a></span>, 
-                  <span> <a href="https://twitter.com/luking66">Twitter</a></span> <br>
-        </div>
-    </div>
-</div>
-<!--<div style="clear: both; background-color: #fff; margin-top: 1.5em; padding: .2em; padding-left: .3em;">-->
+    <header class="header">
+        <img class="profile-image" src="./lujunli.jpg" alt="Lujun Li">
+        <div class="profile-info">
+            <h1 class="profile-name">Lujun LI (李路军)</h1>
+            <p class="profile-title">Researcher at HKGAI and PhD candidate at Hong Kong University of Science and Technology (HKUST)</p>
 
-<div style="clear: both;">
-    <div class="section">
-        <h2>About Me
-        </h2>
-        <div class="paper">
-                I am a researcher of HKGAI and PhD of Hong Kong University of Science and Technology, supervised by Prof. <span> <a href="https://cse.hkust.edu.hk/admin/people/faculty/profile/yikeguo"> Yi-Ke Guo</a></span>. 
-                   <br>
-                My research focus on Efficient Machine Learning and Large Language Models. I have published some top Machine Learning conferences papers like NeurIPS/ICML/ICLR/CVPR/ICCV etc. 
-                   <br>
-                   I am/was an Area Chair for BMCV'2024 and IJCNN'2025, a Program Committee member for NeurIPS/ICLR/ICML/CVPR/ICCV/ECCV/ACL/AAAI etc. <br>
-
-        </div>
-    </div>
-</div>
-
-<body>
-
-
-
-
-<body>
-
-
-
-<div style="clear: both;">
-        <div class="section">
-            <h2>Researches</h2>
-            <div class="paper">
-              
-          
-            My research interests broadly lie in Efficient Machine Learning and Large Language Model: 
-           <br>
-            <strong> Efficient MoE:</strong>  MoE-SVD; D2-MoE;
-           <br>
-           <strong> Efficient LLM:</strong> Pruner-Zero (ICML'24), DSA (NeurIPS'24), ALS (NeurIPS'24), STBLLM (ICLR'25), NoRA;
-           <br>
-           <strong>Automated Efficient ML:</strong> EMQ (ICCV'23), ParZC (AAAI'25) AutoProx (AAAI'23), SasWOT (AAAI'23), Auto-GAS (ECCV'24), AttnZero (ECCV'24);
-        <br>
-       <strong> Automated Distillation:</strong> DisWOT (CVPR'23), Auto-KD (ICCV'23), KD-Zero (NeurIPS'23), DetKDS (ICML'24), Auto-DAS (ECCV'24);
-             <br>
-   <strong>Knowledge Distillation:</strong> Tf-FD (ECCV'22), SHAKE (NeurIPS'22), NORM (ICLR'23);
-     <p style='color:red'><strong>I am looking for collaborators/RA in efficient LLM. Please feel free to contact me through the email.</strong></p>
-        </div>
-    </div>
-</div>
-
-
-<div style="clear: both;">
-    <div class="section">
-        <h2>News
-        </h2>
-        <div class="paper">
-                2025-01: One papers accepted by ICLR2025.  <br>
-                2024-12: One papers accepted by AAAI2025.  <br>
-                2024-09: Two papers accepted by NeurIPS2024.  <br>
-                2024-07: Three papers accepted by ECCV2024.  <br>
-                2024-05: Two papers accepted by ICML2024.  <br>
-                2024-05: I am serving as an Area Chair for BMVC 2024.  <br>
-                2024-04: I obtain the DAAD Postdoc-NeT-AI Fellowship 2024.<br>
-            <!-- <p style='color:red'><strong>I am looking for a postdoctoral position. Please feel free to contact me through the email.</strong></p> -->
-        </div>
-    </div>
-</div>
-
-<div style="clear: both;">
-    <div class="section">
-        <h2>Selected Preprints on Large Models
-        </h2>
-        <div class="paper">
-                        [<a href="https://arxiv.org/abs/2502.17298">2025-02</a>]: Delta Decompression for MoE-based LLMs Compression.  <br>
-                   [<a href="https://openreview.net/forum?id=ho7ZUS1z8A">2024-10</a>]: MoE-SVD: Structured Mixture-of-Experts LLMs Compression via Singular Value Decomposition.  <br>
-                [<a href="https://arxiv.org/abs/2410.03857">2024-10</a>]: You Know What I'm Saying: Jailbreak Attack via Implicit Reference.  <br>
-                [<a href="https://arxiv.org/abs/2408.10280">2024-08</a>]: NoRA: Nested Low-Rank Adaptation for Efficient Fine-Tuning Large Models.  <br>
-             [<a href="https://openreview.net/forum?id=Q88y4Vbo-2Z">2024-06</a>]: Sparse KD: Knowledge Distillation for Sparse Models in Constrained Fine-tuning Scenarios.  <br>
-            <!-- <p style='color:red'><strong>I am looking for a postdoctoral position. Please feel free to contact me through the email.</strong></p> -->
-        </div>
-    </div>
-</div>
-
-
-<body>
-<!--<div style="clear: both; background-color: #fff; margin-top: 1.5em; padding: .2em; padding-left: .3em;">-->
-
-
-
-
-
-<div style="clear: both;">
-    <div class="section">
-        <br>
-        <h3 id="confpapers">First-author Publications (18) : NeurIPS&times4, ICML&times2, ICCV&times2, CVPR&times1, ICLR&times2, ECCV&times4, AAAI&times3</h2>
-        <h4 id="confpapers">*: Co-first author,**: Corresponding author or project leadership.</h4>
-
-
-
-            <div class="paper"><img class="paper" src="./stbllm.png"
-            title="STBLLM: Breaking the 1-Bit Barrier with Structured Binary LLMs">
-        <div><strong>STBLLM:Breaking the 1-Bit Barrier with Structured Binary LLMs</strong><br>
-            Peijie Dong, <strong><font color="blue">Lujun Li*</font></strong>, Yuedong Zhong, DaYou Du, Ruibo FAN, Yuhan Chen, Zhenheng Tang, Qiang Wang, Wei Xue, Yike Guo, Xiaowen Chu.<br>
-      in  <i>TThe Thirteenth International Conference on Learning Representations </i> <strong>(ICLR-2025)</strong><br>
-        <alert>THU-A,   Top Conference in  Artificial Intelligence</alert>
-        <br>
-        [<a href="https://arxiv.org/abs/2408.01803">Paper</a>]
-        [<a href="https://arxiv.org/abs/2408.01803">Code</a>]
-                <br>
-               We introduces STBLLM, a novel approach that breaks the 1-bit barrier in language models by leveraging Structured Binary LLMs.
-        </div>
-        <div class="spanner"></div>
-        </div>
-
-
-        
-                <div class="paper"><img class="paper" src="./parzc.png"
-            title=" ParZC: Parametric Zero-Cost Proxies for Efficient NAS">
-        <div><strong>ParZC: Parametric Zero-Cost Proxies for Efficient NAS</strong><br>
-            Peijie Dong, <strong><font color="blue">Lujun Li*</font></strong>, Zhenheng Tang, Zimian Wei, Xiang Liu,  Qiang Wang, Xiaowen Chu.<br>
-      in  <i>Thirty-Ninth AAAI Conference on Artificial Intelligence </i> <strong>(AAAI-2025)</strong><br>
-        <alert>CCF-A,   Top Conference in  Artificial Intelligence</alert>
-        <br>
-        [<a href="https://arxiv.org/abs/2402.02105">Paper</a>]
-        [<a href="https://arxiv.org/abs/2402.02105">Code</a>]
-                <br>
-               Our Parametric Zero-Cost Proxies (ParZC) improves zero-shot Neural Architecture Search by addressing unequal node importance and using novel techniques for uncertainty estimation and architecture ranking..
-        </div>
-        <div class="spanner"></div>
-        </div>
-        
-        <div class="paper"><img class="paper" src="./DSA.png"
-            title="Discovering Sparsity Allocation for Layer-wise Pruning of Large Language Models">
-        <div><strong>Discovering Sparsity Allocation for Layer-wise Pruning of Large Language Models</strong><br>
-        <strong><font color="blue">Lujun Li </font></strong>, Peijie Dong, Zhenheng Tang, Xiang Liu, Qiang Wang, Wenhan Luo, Wei Xue, Qifeng Liu, Xiaowen Chu, Yike Guo.<br>
-      in </i> Conference on Neural Information Processing Systems </i> <strong>(NeurIPS-2024)</strong><br>
-        <alert>CCF-A, Top Conference in Machine Learning</alert>
-        <br>
-        [<a href="https://openreview.net/forum?id=rgtrYVC9n4">Paper</a>]
-        [<a href=" https://github.com/lliai/DSA">Code</a>]
-                <br>
-                In this paper, we present DSA, the first automated framework for discovering sparsity allocation schemes for layer-wise pruning in Large Language Models.
-        </div>
-        <div class="spanner"></div>
-        </div>
-        <div class="paper"><img class="paper" src="./ALS.jpg"
-            title="Adaptive Layer Sparsity for Large Language Models via Activation Correlation Assessment">
-        <div><strong></strong>Adaptive Layer Sparsity for Large Language Models via Activation Correlation Assessment</strong><br>
-        Wei Li, <strong><font color="blue">Lujun Li** </font></strong>, Mark G. Lee, Shengjie Sun.<br>
-      in </i> Conference on Neural Information Processing Systems </i> <strong>(NeurIPS-2024)</strong><br>
-        <alert>CCF-A, Top Conference in Machine Learning</alert>
-        <br>
-        [<a href="https://openreview.net/forum?id=Jup0qZxH7U">Paper</a>]
-        [<a href="https://github.com/lliai/ALS">Code</a>]
-                <br>
-                In this paper, we present present an approach called Adaptive Layer Sparsity  for optimizing large language models by selectively pruning features in intermediate layers. .
-        </div>
-        <div class="spanner"></div>
-        </div>
-                <div class="paper"><img class="paper" src="./PrunerZero.png"
-            title=" Pruner-Zero: Evolving Symbolic Pruning Metric From Scratch for Large Language Models">
-        <div><strong>Pruner-Zero: Evolving Symbolic Pruning Metric From Scratch for Large Language Models</strong><br>
-            Peijie Dong, <strong><font color="blue">Lujun Li*</font></strong>, Zhenheng Tang, Xiang Liu, Xinglin Pan, Qiang Wang, Xiaowen Chu.<br>
-            in </i> International Conference on Machine Learning </i> <strong>(ICML-2024)</strong><br>
-        <alert>CCF-A, Top Conference in Machine Learning</alert>
-        <br>
-        [<a href="https://openreview.net/pdf?id=1tRLxQzdep">Paper</a>]
-        [<a href="https://github.com/pprp/Pruner-Zero">Code</a>]
-                <br>
-                We propose Pruner-Zero framework to automatically devise pruning metrics for post-training pruning LLMs.
-        </div>
-        <div class="spanner"></div>
-        </div>
-        <div class="paper"><img class="paper" src="./DetKDS.png"
-            title=" DetKDS: Knowledge Distillation Search for Object Detectors">
-        <div><strong>DetKDS: Knowledge Distillation Search for Object Detectors</strong><br>
-        <strong><font color="blue">Lujun Li </font></strong>, Yufan Bao, Peijie Dong, Chuanguang Yang, Anggeng Li, Wenhan Luo, Qifeng Liu, Wei Xue, Yike Guo.<br>
-      in </i> International Conference on Machine Learning </i> <strong>(ICML-2024)</strong><br>
-        <alert>CCF-A, Top Conference in Machine Learning</alert>
-        <br>
-        [<a href="https://openreview.net/pdf/fcca99569d2c5ab0653814d94a6625b2e27ef2a2.pdf">Paper</a>]
-        [<a href="https://github.com/lliai/DetKDS">Code</a>]
-                <br>
-                In this paper, we present DetKDS, the first knowledge distillation search framework to enhance any detectors by searching for optimal distillation policies.
-        </div>
-        <div class="spanner"></div>
-        </div>
-
-
-        <div class="paper"><img class="paper" src="./AttnZero.png"
-            title="AttnZero: Efficient Attention Discovery for Vision Transformers">
-        <div><strong>AttnZero: Efficient Attention Discovery for Vision Transformers</strong><br>
-        <strong><font color="blue">Lujun Li </font></strong>, Zimian Wei, Peijie Dong, Wenhan Luo, Wei Xue,Qifeng Liu,Yike Guo.<br>
-      in </i> European Conference on Computer Vision 2024 </i> <strong>(ECCV-2024)</strong><br>
-        <alert>Top Conference in Computer Vision</alert>
-        <br>
-        [<a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00666.pdf">Paper</a>]
-        [<a href="https://github.com/lliai/AttnZero">Code</a>]
-                <br>
-                In this paper, we present AttnZero, the first framework for automatically discovering efficient attention modules tailored for Vision Transformers (ViTs).
-        </div>
-        <div class="spanner"></div>
-        </div>
-
-        <div class="paper"><img class="paper" src="./AutoGAS.png"
-            title=" Auto-GAS: Automated Proxy Discovery for Training-free Generative Architecture Search">
-        <div><strong>Auto-GAS: Automated Proxy Discovery for Training-free Generative Architecture Search</strong><br>
-        <strong><font color="blue">Lujun Li </font></strong>, Haosen Sun, Shiwen Li, Peijie Dong, Wenhan Luo, Wei Xue,Qifeng Liu,Yike Guo.<br>
-      in </i> European Conference on Computer Vision 2024 </i> <strong>(ECCV-2024)</strong><br>
-        <alert>Top Conference in Computer Vision</alert>
-        <br>
-        [<a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00668.pdf">Paper</a>]
-        [<a href="https://github.com/lliai/Auto-GAS">Code</a>]
-                <br>
-               In this paper, we introduce Auto-GAS, the first training-free Generative Architecture Search (GAS) framework enabled by an auto-discovered proxy .
-        </div>
-        <div class="spanner"></div>
-        </div>
-
-        <div class="paper"><img class="paper" src="./AutoDAS.png"
-            title="Auto-DAS: Automated Proxy Discovery for Training-free Distillation-aware Architecture Search">
-        <div><strong>Auto-DAS: Automated Proxy Discovery for Training-free Distillation-aware Architecture Search</strong><br>
-        Haosen Sun, <strong><font color="blue">Lujun Li </font></strong>,  Peijie Dong,Zimian Wei, Shitong Shao.<br>
-      in </i> European Conference on Computer Vision 2024 </i> <strong>(ECCV-2024)</strong><br>
-        <alert>Top Conference in Computer Vision</alert>
-        <br>
-        [<a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00676.pdf">Paper</a>]
-        [<a href="https://github.com/lliai/Auto-DAS">Code</a>]
-                <br>
-                In this paper, we present Auto-DAS, an automatic proxy discovery framework using an Evolutionary Algorithm (EA) for training-free DAS.
-        </div>
-        <div class="spanner"></div>
-        </div>
-
-        <div class="paper"><img class="paper" src="./kd-zero.png"
-            title=" KD-Zero: Evolving Knowledge Distiller for Any Teacher-Student Pairs">
-        <div><strong>KD-Zero: Evolving Knowledge Distiller for Any Teacher-Student Pairs</strong><br>
-        <strong><font color="blue">Lujun Li </font></strong>, Peijie Dong, Anggeng Li, Zimian Wei, Ya Yang.<br>
-      in </i> Conference on Neural Information Processing Systems </i> <strong>(NeurIPS-2023)</strong><br>
-        <alert>CCF-A, Top Conference in Machine Learning</alert>
-        <br>
-        [<a href="https://openreview.net/pdf?id=OlMKa5YZ8e">Paper</a>]
-        [<a href="https://openreview.net/pdf?id=OlMKa5YZ8e">Code</a>]
-                <br>
-        We present KD-Zero, the first auto-search framework for evolving best distiller from scratch to alleviate teacher-student gaps..
-        </div>
-        <div class="spanner"></div>
-        </div>
-
-
-        <div class="paper"><img class="paper" src="./autokd.png"
-            title=" Automated Knowledge Distillation via Monte Carlo Tree Search">
-        <div><strong> Automated Knowledge Distillation via Monte Carlo Tree Search</strong><br>
-       <strong><font color="blue">Lujun Li </font></strong>, Peijie Dong, Zimian Wei, Ya Yang.<br>
-        in  <i>The International Conference on Computer Vision </i> <strong>(ICCV-2023)</strong>,<br>
-        <alert>CCF-A,   Top Conference in  Computer Vision</alert>
-        <br>
-                [<a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Li_Automated_Knowledge_Distillation_via_Monte_Carlo_Tree_Search_ICCV_2023_paper.pdf">Paper</a>]
-                [<a href="https://github.com/liai/Auto-KD">Code</a>]
-                <br>
-        In this paper, we present Auto-KD, the first automated search framework for optimal knowledge distillation design.
-        </div>
-        <div class="spanner"></div>
-        </div>
-
-        <div class="paper"><img class="paper" src="./EMQ.png"
-            title=" EMQ: Evolving Training-free Proxies for Automated Mixed Precision Quantization.">
-        <div><strong> EMQ: Evolving Training-free Proxies for Automated Mixed Precision Quantization</strong><br>
-            Peijie Dong, <strong><font color="blue">Lujun Li*</font></strong>, Zimian Wei, Xin Niu, Zhiliang Tian, Hengyue Pan.<br>
-      in  <i>The International Conference on Computer Vision </i> <strong>(ICCV-2023)</strong><br>
-        <alert>CCF-A,   Top Conference in  Computer Vision</alert>
-        <br>
-                [<a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Dong_EMQ_Evolving_Training-free_Proxies_for_Automated_Mixed_Precision_Quantization_ICCV_2023_paper.pdf">Paper</a>]
-                [<a href="https://github.com/liai/EMQ-series">Code</a>]
-                <br>
-         We first build the MQ-Bench-101 and develop an automatic search of proxies framework for MQ via evolving algorithms.
-        
-        </div>
-        <div class="spanner"></div>
-        </div>
-
-
-        <div class="paper"><img class="paper" src="./autoprox.png"
-            title=" Auto-Prox: Training-Free Vision Transformer Architecture Search via Automatic Proxy Discovery.">
-        <div><strong> Auto-Prox: Training-Free Vision Transformer Architecture Search via Automatic Proxy Discovery</strong><br>
-            Zimian Wei,  <strong><font color="blue">Lujun Li*</font></strong>, Peijie Dong, Zheng Hui,  Anggeng Li,  Menglong Lu, Hengyue Pan, Dongsheng Li.<br>
-      in  <i>Thirty-Eighth AAAI Conference on Artificial Intelligence </i> <strong>(AAAI-2024)</strong><br>
-        <alert>CCF-A,   Top Conference in  Artificial Intelligence</alert>
-        <br>
-                [<a href="https://arxiv.org/abs/2402.02105">Paper</a>]
-                [<a href="https://github.com/lliai/Auto-Prox-AAAI24">Code</a>]
-                <br>
-         We first build the ViT-Bench-101 and develop zero-cost proxy search for Vision Transformer  on multiple datasets.
-        
-        </div>
-        <div class="spanner"></div>
-        </div>
-
-        <div class="paper"><img class="paper" src="./saswot.png"
-            title=" SasWOT: Real-time Semantic Segmentation Architecture Search WithOut Training.">
-        <div><strong> SasWOT: Real-time Semantic Segmentation Architecture Search WithOut Training</strong><br>
-            Chendi Zhu,  <strong><font color="blue">Lujun Li*</font></strong>, Yuli Wu, Zheng Hui,  Zhengxing Sun.<br>
-      in  <i>Thirty-Eighth AAAI Conference on Artificial Intelligence </i> <strong>(AAAI-2024)</strong><br>
-        <alert>CCF-A,   Top Conference in  Artificial Intelligence</alert>
-        <br>
-              [<a href="https://ojs.aaai.org/index.php/AAAI/article/view/28606/29177">Paper</a>]
-                [<a href="https://ojs.aaai.org/index.php/AAAI/article/view/28606/29177">Code</a>]
-                <br>
-        We present the first training-free architecture search framework for Real-time Semantic Segmentation.
-        
-        </div>
-        <div class="spanner"></div>
-        </div>
-
-
-
-        <div class="paper"><img class="paper" src="./shake.png"
-                                title=" Shadow Knowledge Distillation: Bridging Offline and Online Knowledge Transfer">
-            <div><strong> Shadow Knowledge Distillation: Bridging Offline and Online Knowledge Transfer</strong><br>
-               <strong><font color="blue">Lujun Li </font></strong>, Zhe Jin.<br>
-      in </i> Conference on Neural Information Processing Systems </i> <strong>(NeurIPS-2022)</strong><br>
-        <alert>CCF-A, Top Conference in Machine Learning</alert>
-                <br>
-                [<a href="https://openreview.net/pdf?id=prQT0gN81oG">Paper</a>]
-                [<a href="https://github.com/liai/SHAKE">Code</a>]
-                <br>
-               We present SHAKE with reversed distillation and shadow head to bridge offline and online knowledge transfer, achieving superior performance in multiple tasks and scenarios.
-             
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> Clear Water Bay Peninsula, New Territories, Hong Kong</p>
+                <p><i class="fas fa-envelope"></i> lilujunai@gmail.com, lliee@ust.hk</p>
             </div>
-            <div class="spanner"></div>
-        </div>
 
-        <div class="paper"><img class="paper" src="./tffd.png"
-                                title="Self-Regulated Feature Learning via Teacher-free Feature Distillation">
-            <div><strong>Self-Regulated Feature Learning via Teacher-free Feature Distillation</strong><br>
-                <strong><font color="blue">Lujun Li </font></strong>.<br>
-                in <i>European Conference on Computer Vision </i> <strong> (ECCV-2022) <strong><br>
-                <alert>CCF-B;  Top Conference in  Computer Vision</alert>
-              <br>
-                [<a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136860337.pdf">Paper</a>]
-                [<a href="https://github.com/liai/Teacher-free-Distillation">Code</a>]
-                <br>
-                We we propose Tf-FD for reusing channel-wise and layer-wise meaningful features within the student to provide teacher-like knowledge without an additional model.
-           
+            <div class="social-links">
+                <a href="https://openreview.net/profile?id=~Lujun_Li1" title="OpenReview"><i class="fas fa-file-alt"></i></a>
+                <a href="https://scholar.google.com/citations?hl=en&user=aPl3DjIAAAAJ&view_op=list_works&gmla=AJsN-F6PzWqNjlzy8OapYAJ7NBWh_vlvN_-G0boZwefvxSkVZAlxhoFnfcO7yhvjQzM8qSmFKDsaTnULJLHvRzDpIqfgabOt9FmyBOaHz_hcjDMdRy47Ois" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                <a href="https://github.com/lliai" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/luking66" title="Twitter"><i class="fab fa-twitter"></i></a>
             </div>
-            <div class="spanner"></div>
         </div>
+    </header>
 
 
-        <div class="paper"><img class="paper" src="./diswot.png"
-                                title=" DisWOT: Student Architecture Search for Distillation WithOut Training">
-            <div><strong> DisWOT: Student Architecture Search for Distillation WithOut Training</strong><br>
-                 Peijie Dong, <strong><font color="blue">Lujun Li***</font></strong>, Zimian Wei<br>
-                in                     <i>IEEE / CVF Computer Vision and Pattern Recognition Conference </i> <strong>(CVPR-2023)</strong><br>
-           <alert>CCF-A,   Top Conference in  Computer Vision</alert>
-                <br>
-                [<a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Dong_DisWOT_Student_Architecture_Search_for_Distillation_WithOut_Training_CVPR_2023_paper.pdf">Paper</a>]
-                [<a href="https://github.com/liai/DisWOT-CVPR2023">Code</a>]
-                <br>
-                <br>
-                 We propose a strong self-supervised augmented knowledge distillation method from hierarchical feature maps for image classification.
-                
-            </div>
-            <div class="spanner"></div>
-        </div>
 
-        <div class="paper"><img class="paper" src="./norm.png"
-                                title="   NORM: Knowledge Distillation via N-to-One Representation Matching">
-            <div><strong>   NORM: Knowledge Distillation via N-to-One Representation Matching</strong><br>
-                 Xiaolong Liu, <strong><font color="blue">Lujun Li*</font></strong>, Chao Li, Anbang Yao<br>
-                in   <i>International Conference on Learning Representations </i> <strong>(ICLR-2023)</strong><br>
-                <alert>Top Conference in Machine Learning</alert><br>
-                [<a href="https://openreview.net/pdf?id=CRNwGauQpb6">Paper</a>]
-                [<a href="https://openreview.net/attachment?id=CRNwGauQpb6&name=supplementary_material">Code</a>]
-                <br>
-                <br>
-                 We presents a new knowledge distillation method via n-to-one representation matching.
-            </div>
-            <div class="spanner"></div>
-        </div>
-
-
-</body>
-<div style="clear: both;">
     <div class="section">
-        <h2 id="confpapers">Honor</h2>
+        <h2>About Me</h2>
+        <div class="card">
+            <p>I am a researcher at HKGAI and PhD candidate at Hong Kong University of Science and Technology, supervised by Prof. <a href="https://cse.hkust.edu.hk/admin/people/faculty/profile/yikeguo">Yi-Ke Guo</a>.</p>
+            <p>My research focuses on Efficient Machine Learning and Large Language Models. I have published papers in top Machine Learning conferences including NeurIPS, ICML, ICLR, CVPR, ICCV, and others.</p>
+            <p>I am/was an Area Chair for BMCV'2024 and IJCNN'2025, and a Program Committee member for NeurIPS, ICLR, ICML, CVPR, ICCV, ECCV, ACL, AAAI, and more.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Research Interests</h2>
+        <div class="card">
+            <p>My research interests broadly lie in Efficient Machine Learning and Large Language Models:</p>
+            
+            <p><strong class="highlight">Efficient MoE:</strong> MoE-SVD; D2-MoE</p>
+            
+            <p><strong class="highlight">Efficient LLM:</strong> Pruner-Zero (ICML'24), DSA (NeurIPS'24), ALS (NeurIPS'24), STBLLM (ICLR'25), NoRA</p>
+            
+            <p><strong class="highlight">Automated Efficient ML:</strong> EMQ (ICCV'23), ParZC (AAAI'25), AutoProx (AAAI'23), SasWOT (AAAI'23), Auto-GAS (ECCV'24), AttnZero (ECCV'24)</p>
+            
+            <p><strong class="highlight">Automated Distillation:</strong> DisWOT (CVPR'23), Auto-KD (ICCV'23), KD-Zero (NeurIPS'23), DetKDS (ICML'24), Auto-DAS (ECCV'24)</p>
+            
+            <p><strong class="highlight">Knowledge Distillation:</strong> Tf-FD (ECCV'22), SHAKE (NeurIPS'22), NORM (ICLR'23)</p>
+            
+            <p style="color:#e74c3c; font-weight: 600; margin-top: 1rem;">I am looking for collaborators/RA in efficient LLM. Please feel free to contact me through email.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>News</h2>
+        <div class="card">
+            <div class="news-item">
+                <div class="news-date">2025-01</div>
+                <div>One paper accepted by ICLR 2025.</div>
+            </div>
+            <div class="news-item">
+                <div class="news-date">2024-12</div>
+                <div>One paper accepted by AAAI 2025.</div>
+            </div>
+            <div class="news-item">
+                <div class="news-date">2024-09</div>
+                <div>Two papers accepted by NeurIPS 2024.</div>
+            </div>
+            <div class="news-item">
+                <div class="news-date">2024-07</div>
+                <div>Three papers accepted by ECCV 2024.</div>
+            </div>
+            <div class="news-item">
+                <div class="news-date">2024-05</div>
+                <div>Two papers accepted by ICML 2024.</div>
+            </div>
+            <div class="news-item">
+                <div class="news-date">2024-05</div>
+                <div>I am serving as an Area Chair for BMVC 2024.</div>
+            </div>
+            <div class="news-item">
+                <div class="news-date">2024-04</div>
+                <div>I obtained the DAAD Postdoc-NeT-AI Fellowship 2024.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Selected Preprints on Large Models</h2>
+        <div class="card">
+            <div class="news-item">
+                <div class="news-date">2025-02</div>
+                <div><a href="https://arxiv.org/abs/2502.17298">Delta Decompression for MoE-based LLMs Compression</a></div>
+            </div>
+            <div class="news-item">
+                <div class="news-date">2024-10</div>
+                <div><a href="https://openreview.net/forum?id=ho7ZUS1z8A">MoE-SVD: Structured Mixture-of-Experts LLMs Compression via Singular Value Decomposition</a></div>
+            </div>
+            <div class="news-item">
+                <div class="news-date">2024-10</div>
+                <div><a href="https://arxiv.org/abs/2410.03857">You Know What I'm Saying: Jailbreak Attack via Implicit Reference</a></div>
+            </div>
+            <div class="news-item">
+                <div class="news-date">2024-08</div>
+                <div><a href="https://arxiv.org/abs/2408.10280">NoRA: Nested Low-Rank Adaptation for Efficient Fine-Tuning Large Models</a></div>
+            </div>
+            <div class="news-item">
+                <div class="news-date">2024-06</div>
+                <div><a href="https://openreview.net/forum?id=Q88y4Vbo-2Z">Sparse KD: Knowledge Distillation for Sparse Models in Constrained Fine-tuning Scenarios</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>First-author Publications (18)</h2>
+        <h4>*: Co-first author, **: Corresponding author or project leadership</h4>
+
         <div class="paper">
+            <img class="paper-image" src="./stbllm.png" alt="STBLLM: Breaking the 1-Bit Barrier with Structured Binary LLMs">
+            <div class="paper-content">
+                <div class="paper-title">STBLLM: Breaking the 1-Bit Barrier with Structured Binary LLMs</div>
+                <div class="paper-authors">Peijie Dong, <span class="highlight">Lujun Li*</span>, Yuedong Zhong, DaYou Du, Ruibo FAN, Yuhan Chen, Zhenheng Tang, Qiang Wang, Wei Xue, Yike Guo, Xiaowen Chu</div>
+                <div class="paper-venue">The Thirteenth International Conference on Learning Representations (ICLR-2025)</div>
+                <div class="paper-alert">THU-A, Top Conference in Artificial Intelligence</div>
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2408.01803">Paper</a>
+                    <a href="https://arxiv.org/abs/2408.01803">Code</a>
+                </div>
+                <div class="paper-abstract">We introduces STBLLM, a novel approach that breaks the 1-bit barrier in language models by leveraging Structured Binary LLMs.</div>
+            </div>
+        </div>
+
+        <div class="paper">
+            <img class="paper-image" src="./parzc.png" alt="ParZC: Parametric Zero-Cost Proxies for Efficient NAS">
+            <div class="paper-content">
+                <div class="paper-title">ParZC: Parametric Zero-Cost Proxies for Efficient NAS</div>
+                <div class="paper-authors">Peijie Dong, <span class="highlight">Lujun Li*</span>, Zhenheng Tang, Zimian Wei, Xiang Liu, Qiang Wang, Xiaowen Chu</div>
+                <div class="paper-venue">Thirty-Ninth AAAI Conference on Artificial Intelligence (AAAI-2025)</div>
+                <div class="paper-alert">CCF-A, Top Conference in Artificial Intelligence</div>
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2402.02105">Paper</a>
+                    <a href="https://arxiv.org/abs/2402.02105">Code</a>
+                </div>
+                <div class="paper-abstract">Our Parametric Zero-Cost Proxies (ParZC) improves zero-shot Neural Architecture Search by addressing unequal node importance and using novel techniques for uncertainty estimation and architecture ranking.</div>
+            </div>
+        </div>
+        <div class="paper">
+            <img class="paper-image" src="./DSA.png" alt="Discovering Sparsity Allocation for Layer-wise Pruning of Large Language Models">
+            <div class="paper-content">
+                <div class="paper-title">Discovering Sparsity Allocation for Layer-wise Pruning of Large Language Models</div>
+                <div class="paper-authors"><span class="highlight">Lujun Li</span>, Peijie Dong, Zhenheng Tang, Xiang Liu, Qiang Wang, Wenhan Luo, Wei Xue, Qifeng Liu, Xiaowen Chu, Yike Guo</div>
+                <div class="paper-venue">Conference on Neural Information Processing Systems (NeurIPS-2024)</div>
+                <div class="paper-alert">CCF-A, Top Conference in Machine Learning</div>
+                <div class="paper-links">
+                    <a href="https://openreview.net/forum?id=rgtrYVC9n4">Paper</a>
+                    <a href="https://github.com/lliai/DSA">Code</a>
+                </div>
+                <div class="paper-abstract">In this paper, we present DSA, the first automated framework for discovering sparsity allocation schemes for layer-wise pruning in Large Language Models.</div>
+            </div>
+        </div>
+        
+        <div class="paper">
+            <img class="paper-image" src="./ALS.jpg" alt="Adaptive Layer Sparsity for Large Language Models via Activation Correlation Assessment">
+            <div class="paper-content">
+                <div class="paper-title">Adaptive Layer Sparsity for Large Language Models via Activation Correlation Assessment</div>
+                <div class="paper-authors">Wei Li, <span class="highlight">Lujun Li**</span>, Mark G. Lee, Shengjie Sun</div>
+                <div class="paper-venue">Conference on Neural Information Processing Systems (NeurIPS-2024)</div>
+                <div class="paper-alert">CCF-A, Top Conference in Machine Learning</div>
+                <div class="paper-links">
+                    <a href="https://openreview.net/forum?id=Jup0qZxH7U">Paper</a>
+                    <a href="https://github.com/lliai/ALS">Code</a>
+                </div>
+                <div class="paper-abstract">In this paper, we present an approach called Adaptive Layer Sparsity for optimizing large language models by selectively pruning features in intermediate layers.</div>
+            </div>
+        </div>
+        
+        <div class="paper">
+            <img class="paper-image" src="./PrunerZero.png" alt="Pruner-Zero: Evolving Symbolic Pruning Metric From Scratch for Large Language Models">
+            <div class="paper-content">
+                <div class="paper-title">Pruner-Zero: Evolving Symbolic Pruning Metric From Scratch for Large Language Models</div>
+                <div class="paper-authors">Peijie Dong, <span class="highlight">Lujun Li*</span>, Zhenheng Tang, Xiang Liu, Xinglin Pan, Qiang Wang, Xiaowen Chu</div>
+                <div class="paper-venue">International Conference on Machine Learning (ICML-2024)</div>
+                <div class="paper-alert">CCF-A, Top Conference in Machine Learning</div>
+                <div class="paper-links">
+                    <a href="https://openreview.net/pdf?id=1tRLxQzdep">Paper</a>
+                    <a href="https://github.com/pprp/Pruner-Zero">Code</a>
+                </div>
+                <div class="paper-abstract">We propose Pruner-Zero framework to automatically devise pruning metrics for post-training pruning LLMs.</div>
+            </div>
+        </div>
+        
+        <div class="paper">
+            <img class="paper-image" src="./DetKDS.png" alt="DetKDS: Knowledge Distillation Search for Object Detectors">
+            <div class="paper-content">
+                <div class="paper-title">DetKDS: Knowledge Distillation Search for Object Detectors</div>
+                <div class="paper-authors"><span class="highlight">Lujun Li</span>, Yufan Bao, Peijie Dong, Chuanguang Yang, Anggeng Li, Wenhan Luo, Qifeng Liu, Wei Xue, Yike Guo</div>
+                <div class="paper-venue">International Conference on Machine Learning (ICML-2024)</div>
+                <div class="paper-alert">CCF-A, Top Conference in Machine Learning</div>
+                <div class="paper-links">
+                    <a href="https://openreview.net/pdf/fcca99569d2c5ab0653814d94a6625b2e27ef2a2.pdf">Paper</a>
+                    <a href="https://github.com/lliai/DetKDS">Code</a>
+                </div>
+                <div class="paper-abstract">In this paper, we present DetKDS, the first knowledge distillation search framework to enhance any detectors by searching for optimal distillation policies.</div>
+            </div>
+        </div>
+        
+        <div class="paper">
+            <img class="paper-image" src="./AttnZero.png" alt="AttnZero: Efficient Attention Discovery for Vision Transformers">
+            <div class="paper-content">
+                <div class="paper-title">AttnZero: Efficient Attention Discovery for Vision Transformers</div>
+                <div class="paper-authors"><span class="highlight">Lujun Li</span>, Zimian Wei, Peijie Dong, Wenhan Luo, Wei Xue, Qifeng Liu, Yike Guo</div>
+                <div class="paper-venue">European Conference on Computer Vision (ECCV-2024)</div>
+                <div class="paper-alert">Top Conference in Computer Vision</div>
+                <div class="paper-links">
+                    <a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00666.pdf">Paper</a>
+                    <a href="https://github.com/lliai/AttnZero">Code</a>
+                </div>
+                <div class="paper-abstract">In this paper, we present AttnZero, the first framework for automatically discovering efficient attention modules tailored for Vision Transformers (ViTs).</div>
+            </div>
+        </div>
+        
+        <div class="paper">
+            <img class="paper-image" src="./AutoGAS.png" alt="Auto-GAS: Automated Proxy Discovery for Training-free Generative Architecture Search">
+            <div class="paper-content">
+                <div class="paper-title">Auto-GAS: Automated Proxy Discovery for Training-free Generative Architecture Search</div>
+                <div class="paper-authors"><span class="highlight">Lujun Li</span>, Haosen Sun, Shiwen Li, Peijie Dong, Wenhan Luo, Wei Xue, Qifeng Liu, Yike Guo</div>
+                <div class="paper-venue">European Conference on Computer Vision (ECCV-2024)</div>
+                <div class="paper-alert">Top Conference in Computer Vision</div>
+                <div class="paper-links">
+                    <a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00668.pdf">Paper</a>
+                    <a href="https://github.com/lliai/Auto-GAS">Code</a>
+                </div>
+                <div class="paper-abstract">In this paper, we introduce Auto-GAS, the first training-free Generative Architecture Search (GAS) framework enabled by an auto-discovered proxy.</div>
+            </div>
+        </div>
+        
+        <div class="paper">
+            <img class="paper-image" src="./AutoDAS.png" alt="Auto-DAS: Automated Proxy Discovery for Training-free Distillation-aware Architecture Search">
+            <div class="paper-content">
+                <div class="paper-title">Auto-DAS: Automated Proxy Discovery for Training-free Distillation-aware Architecture Search</div>
+                <div class="paper-authors">Haosen Sun, <span class="highlight">Lujun Li</span>, Peijie Dong, Zimian Wei, Shitong Shao</div>
+                <div class="paper-venue">European Conference on Computer Vision (ECCV-2024)</div>
+                <div class="paper-alert">Top Conference in Computer Vision</div>
+                <div class="paper-links">
+                    <a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00676.pdf">Paper</a>
+                    <a href="https://github.com/lliai/Auto-DAS">Code</a>
+                </div>
+                <div class="paper-abstract">In this paper, we present Auto-DAS, an automatic proxy discovery framework using an Evolutionary Algorithm (EA) for training-free DAS.</div>
+            </div>
+        </div>
+        
+        <div class="paper">
+            <img class="paper-image" src="./kd-zero.png" alt="KD-Zero: Evolving Knowledge Distiller for Any Teacher-Student Pairs">
+            <div class="paper-content">
+                <div class="paper-title">KD-Zero: Evolving Knowledge Distiller for Any Teacher-Student Pairs</div>
+                <div class="paper-authors"><span class="highlight">Lujun Li</span>, Peijie Dong, Anggeng Li, Zimian Wei, Ya Yang</div>
+                <div class="paper-venue">Conference on Neural Information Processing Systems (NeurIPS-2023)</div>
+                <div class="paper-alert">CCF-A, Top Conference in Machine Learning</div>
+                <div class="paper-links">
+                    <a href="https://openreview.net/pdf?id=OlMKa5YZ8e">Paper</a>
+                    <a href="https://openreview.net/pdf?id=OlMKa5YZ8e">Code</a>
+                </div>
+                <div class="paper-abstract">We present KD-Zero, the first auto-search framework for evolving best distiller from scratch to alleviate teacher-student gaps.</div>
+            </div>
+        </div>
+        
+        <div class="paper">
+            <img class="paper-image" src="./autokd.png" alt="Automated Knowledge Distillation via Monte Carlo Tree Search">
+            <div class="paper-content">
+                <div class="paper-title">Automated Knowledge Distillation via Monte Carlo Tree Search</div>
+                <div class="paper-authors"><span class="highlight">Lujun Li</span>, Peijie Dong, Zimian Wei, Ya Yang</div>
+                <div class="paper-venue">International Conference on Computer Vision (ICCV-2023)</div>
+                <div class="paper-alert">CCF-A, Top Conference in Computer Vision</div>
+                <div class="paper-links">
+                    <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Li_Automated_Knowledge_Distillation_via_Monte_Carlo_Tree_Search_ICCV_2023_paper.pdf">Paper</a>
+                    <a href="https://github.com/liai/Auto-KD">Code</a>
+                </div>
+                <div class="paper-abstract">In this paper, we present Auto-KD, the first automated search framework for optimal knowledge distillation design.</div>
+            </div>
+        </div>
+        
+        <div class="paper">
+            <img class="paper-image" src="./EMQ.png" alt="EMQ: Evolving Training-free Proxies for Automated Mixed Precision Quantization">
+            <div class="paper-content">
+                <div class="paper-title">EMQ: Evolving Training-free Proxies for Automated Mixed Precision Quantization</div>
+                <div class="paper-authors">Peijie Dong, <span class="highlight">Lujun Li*</span>, Zimian Wei, Xin Niu, Zhiliang Tian, Hengyue Pan</div>
+                <div class="paper-venue">International Conference on Computer Vision (ICCV-2023)</div>
+                <div class="paper-alert">CCF-A, Top Conference in Computer Vision</div>
+                <div class="paper-links">
+                    <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Dong_EMQ_Evolving_Training-free_Proxies_for_Automated_Mixed_Precision_Quantization_ICCV_2023_paper.pdf">Paper</a>
+                    <a href="https://github.com/liai/EMQ-series">Code</a>
+                </div>
+                <div class="paper-abstract">We first build the MQ-Bench-101 and develop an automatic search of proxies framework for MQ via evolving algorithms.</div>
+            </div>
+        </div>
+        
+        <div class="paper">
+            <img class="paper-image" src="./autoprox.png" alt="Auto-Prox: Training-Free Vision Transformer Architecture Search via Automatic Proxy Discovery">
+            <div class="paper-content">
+                <div class="paper-title">Auto-Prox: Training-Free Vision Transformer Architecture Search via Automatic Proxy Discovery</div>
+                <div class="paper-authors">Zimian Wei, <span class="highlight">Lujun Li*</span>, Peijie Dong, Zheng Hui, Anggeng Li, Menglong Lu, Hengyue Pan, Dongsheng Li</div>
+                <div class="paper-venue">Thirty-Eighth AAAI Conference on Artificial Intelligence (AAAI-2024)</div>
+                <div class="paper-alert">CCF-A, Top Conference in Artificial Intelligence</div>
+                <div class="paper-links">
+                    <a href="https://arxiv.org/abs/2402.02105">Paper</a>
+                    <a href="https://github.com/lliai/Auto-Prox-AAAI24">Code</a>
+                </div>
+                <div class="paper-abstract">We first build the ViT-Bench-101 and develop zero-cost proxy search for Vision Transformer on multiple datasets.</div>
+            </div>
+        </div>
+        
+        <div class="paper">
+            <img class="paper-image" src="./saswot.png" alt="SasWOT: Real-time Semantic Segmentation Architecture Search WithOut Training">
+            <div class="paper-content">
+                <div class="paper-title">SasWOT: Real-time Semantic Segmentation Architecture Search WithOut Training</div>
+                <div class="paper-authors">Chendi Zhu, <span class="highlight">Lujun Li*</span>, Yuli Wu, Zheng Hui, Zhengxing Sun</div>
+                <div class="paper-venue">Thirty-Eighth AAAI Conference on Artificial Intelligence (AAAI-2024)</div>
+                <div class="paper-alert">CCF-A, Top Conference in Artificial Intelligence</div>
+                <div class="paper-links">
+                    <a href="https://ojs.aaai.org/index.php/AAAI/article/view/28606/29177">Paper</a>
+                    <a href="https://ojs.aaai.org/index.php/AAAI/article/view/28606/29177">Code</a>
+                </div>
+                <div class="paper-abstract">We present the first training-free architecture search framework for Real-time Semantic Segmentation.</div>
+            </div>
+        </div>
+        
+        <div class="paper">
+            <img class="paper-image" src="./shake.png" alt="Shadow Knowledge Distillation: Bridging Offline and Online Knowledge Transfer">
+            <div class="paper-content">
+                <div class="paper-title">Shadow Knowledge Distillation: Bridging Offline and Online Knowledge Transfer</div>
+                <div class="paper-authors"><span class="highlight">Lujun Li</span>, Zhe Jin</div>
+                <div class="paper-venue">Conference on Neural Information Processing Systems (NeurIPS-2022)</div>
+                <div class="paper-alert">CCF-A, Top Conference in Machine Learning</div>
+                <div class="paper-links">
+                    <a href="https://openreview.net/pdf?id=prQT0gN81oG">Paper</a>
+                    <a href="https://github.com/liai/SHAKE">Code</a>
+                </div>
+                <div class="paper-abstract">We present SHAKE with reversed distillation and shadow head to bridge offline and online knowledge transfer, achieving superior performance in multiple tasks and scenarios.</div>
+            </div>
+        </div>
+        
+        <div class="paper">
+            <img class="paper-image" src="./tffd.png" alt="Self-Regulated Feature Learning via Teacher-free Feature Distillation">
+            <div class="paper-content">
+                <div class="paper-title">Self-Regulated Feature Learning via Teacher-free Feature Distillation</div>
+                <div class="paper-authors"><span class="highlight">Lujun Li</span></div>
+                <div class="paper-venue">European Conference on Computer Vision (ECCV-2022)</div>
+                <div class="paper-alert">CCF-B, Top Conference in Computer Vision</div>
+                <div class="paper-links">
+                    <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136860337.pdf">Paper</a>
+                    <a href="https://github.com/liai/Teacher-free-Distillation">Code</a>
+                </div>
+                <div class="paper-abstract">We propose Tf-FD for reusing channel-wise and layer-wise meaningful features within the student to provide teacher-like knowledge without an additional model.</div>
+            </div>
+        </div>
+        
+        <div class="paper">
+            <img class="paper-image" src="./diswot.png" alt="DisWOT: Student Architecture Search for Distillation WithOut Training">
+            <div class="paper-content">
+                <div class="paper-title">DisWOT: Student Architecture Search for Distillation WithOut Training</div>
+                <div class="paper-authors">Peijie Dong, <span class="highlight">Lujun Li***</span>, Zimian Wei</div>
+                <div class="paper-venue">IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR-2023)</div>
+                <div class="paper-alert">CCF-A, Top Conference in Computer Vision</div>
+                <div class="paper-links">
+                    <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Dong_DisWOT_Student_Architecture_Search_for_Distillation_WithOut_Training_CVPR_2023_paper.pdf">Paper</a>
+                    <a href="https://github.com/liai/DisWOT-CVPR2023">Code</a>
+                </div>
+                <div class="paper-abstract">We propose a strong self-supervised augmented knowledge distillation method from hierarchical feature maps for image classification.</div>
+            </div>
+        </div>
+        
+
+        <div class="paper">
+            <img class="paper-image" src="./norm.png" alt="NORM: Knowledge Distillation via N-to-One Representation Matching">
+            <div class="paper-content">
+                <div class="paper-title">  NORM: Knowledge Distillation via N-to-One Representation Matching</div>
+                <div class="paper-authors"> Xiaolong Liu, <span class="highlight">Lujun Li***</span>, , Chao Li, Anbang Yao</div>
+                <div class="paper-venue">International Conference on Learning Representations (ICLR-2023)</div>
+                <div class="paper-alert">Top Conference in Machine Learning</div>
+                <div class="paper-links">
+                    <a href="https://openreview.net/pdf?id=CRNwGauQpb6">Paper</a>
+                    <a href="https://openreview.net/attachment?id=CRNwGauQpb6&name=supplementary_material">Code</a>
+                </div>
+                <div class="paper-abstract">We presents a new knowledge distillation method via n-to-one representation matching..</div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="section">
+        <h2>Honors</h2>
+        <div class="card">
             <ul>
-                <li>
-                DAAD Postdoc-NeT-AI Fellowship 2024
-                    <li>
-                    Top 3 in CVPR2022 Second lightweight NAS challenge supernet Track, 2022
-                </li>
-                <li>
-                    Outstanding entrepreneurial undergraduate, 2019
-                </li>
-                <li>
-                    Second Prize (National-level)  China Undergraduate electronic design competition, 2017,2018
-                </li>
-                <li>
-                    MCM/ICM -- Honorable Mention, 2016
-                </li>
+                <li>DAAD Postdoc-NeT-AI Fellowship 2024</li>
+                <li>Top 3 in CVPR2022 Second lightweight NAS challenge supernet Track, 2022</li>
+                <li>Outstanding entrepreneurial undergraduate, 2019</li>
+                <li>Second Prize (National-level) China Undergraduate electronic design competition, 2017, 2018</li>
+                <li>MCM/ICM -- Honorable Mention, 2016</li>
             </ul>
-            <div class="spanner"></div>
         </div>
     </div>
-</div>
 
-<div style="clear: both;">
     <div class="section">
         <h2>Services</h2>
-        <div class="paper">
-          
-            Area Chair: 
-   <li>
-                 International Joint Conference on Neural Networks (IJCNN), 2025
-            <li>
-                
-            British Machine Vision Conference (BMVC), 2024
+        <div class="card">
+            <h3>Area Chair</h3>
+            <ul>
+                <li>International Joint Conference on Neural Networks (IJCNN), 2025</li>
+                <li>British Machine Vision Conference (BMVC), 2024</li>
+            </ul>
 
-           
-            <br>
-            Conference Review: 
-                <li>
-            2025: CVPR, ICML, IJCAI, AutoML, ACL;
-                        <li>
-            2024: ACM MM, ECCV, ICML,  NeurIPS, ICLR, AAAI, AutoML, ACL;
-    <li>
+            <h3>Conference Review</h3>
+            <ul>
+                <li>2025: CVPR, ICML, IJCAI, AutoML, ACL</li>
+                <li>2024: ACM MM, ECCV, ICML, NeurIPS, ICLR, AAAI, AutoML, ACL</li>
+                <li>2023: CVPR, AAAI, ACM MM, ICCV, NeurIPS, ICLR, WACV, AutoML</li>
+                <li>2022: CVPR, AAAI, ACM MM, ECCV, NeurIPS, WACV</li>
+                <li>2021: AAAI, ACM MM</li>
+            </ul>
 
-            2023: CVPR, AAAI,  ACM MM, ICCV, NeurIPS, ICLR, WACV, AutoML;
-            <li>
-    
-           2022: CVPR, AAAI,  ACM MM, ECCV, NeurIPS, WACV;
-
-              <li>
-    
-            2021: AAAI, ACM MM; 
-            <br>
-
-            Journal Review:
-            <li>
-            IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)
-            <li>
-International Journal of Computer Vision (IJCV)
-<li>
-IEEE Transactions on Neural Networks and Learning Systems (TNNLS)
-<li>
-IEEE Transactions on Circuits System and Video Technology (TCSVT)
-
-
+            <h3>Journal Review</h3>
+            <ul>
+                <li>IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</li>
+                <li>International Journal of Computer Vision (IJCV)</li>
+                <li>IEEE Transactions on Neural Networks and Learning Systems (TNNLS)</li>
+                <li>IEEE Transactions on Circuits System and Video Technology (TCSVT)</li>
+            </ul>
         </div>
     </div>
-</div>
 
 
+    <div class="section">
+        <h2>Visitor Information</h2>
+        <div class="card">
+            <div id="visitor-map" class="map-container"></div>
+            <div class="visitor-info">
+                <div class="visitor-card">
+                    <div class="visitor-value" id="visitor-ip">-</div>
+                    <div class="visitor-label">Your IP Address</div>
+                </div>
+                <div class="visitor-card">
+                    <div class="visitor-value" id="visitor-location">-</div>
+                    <div class="visitor-label">Location</div>
+                </div>
+                <div class="visitor-card">
+                    <div class="visitor-value" id="visitor-count">1,254</div>
+                    <div class="visitor-label">Total Visitors</div>
+                </div>
+                <div class="visitor-card">
+                    <div class="visitor-value" id="visitor-browser">-</div>
+                    <div class="visitor-label">Browser</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get visitor IP and location info
+        fetch('https://ipapi.co/json/')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('visitor-ip').textContent = data.ip;
+                document.getElementById('visitor-location').textContent = `${data.city}, ${data.country_name}`;
+                
+                // Load map with visitor's location
+                loadMap(data.latitude, data.longitude, data.city, data.country_name);
+                
+                // Set browser info
+                const browserName = getBrowserName();
+                document.getElementById('visitor-browser').textContent = browserName;
+            })
+            .catch(error => {
+                console.error('Error fetching visitor info:', error);
+                document.getElementById('visitor-ip').textContent = 'Error';
+                document.getElementById('visitor-location').textContent = 'Error';
+                
+                // Load default map
+                loadMap(22.3193, 114.1694, 'Hong Kong', 'China');
+            });
+
+        // Load map using Leaflet.js
+        function loadMap(lat, lon, city, country) {
+            // Add Leaflet CSS
+            const leafletCSS = document.createElement('link');
+            leafletCSS.rel = 'stylesheet';
+            leafletCSS.href = 'https://unpkg.com/leaflet@1.9.3/dist/leaflet.css';
+            document.head.appendChild(leafletCSS);
+            
+            // Add Leaflet JS
+            const leafletScript = document.createElement('script');
+            leafletScript.src = 'https://unpkg.com/leaflet@1.9.3/dist/leaflet.js';
+            document.head.appendChild(leafletScript);
+            
+            // Initialize map when Leaflet is loaded
+            leafletScript.onload = function() {
+                const map = L.map('visitor-map').setView([lat, lon], 5);
+                
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+                
+                L.marker([lat, lon]).addTo(map)
+                    .bindPopup(`Visitor location: ${city}, ${country}`)
+                    .openPopup();
+                
+                // Add HKUST location marker
+                const hkustLat = 22.3370;
+                const hkustLon = 114.2639;
+                
+                L.marker([hkustLat, hkustLon]).addTo(map)
+                    .bindPopup('HKUST: Hong Kong University of Science and Technology');
+                
+                // Add a line connecting visitor to HKUST
+                const latlngs = [
+                    [lat, lon],
+                    [hkustLat, hkustLon]
+                ];
+                
+                L.polyline(latlngs, {color: 'blue', dashArray: '5, 10'}).addTo(map);
+            };
+        }
+        
+        // Get browser name
+        function getBrowserName() {
+            const userAgent = navigator.userAgent;
+            let browserName;
+            
+            if (userAgent.match(/chrome|chromium|crios/i)) {
+                browserName = "Chrome";
+            } else if (userAgent.match(/firefox|fxios/i)) {
+                browserName = "Firefox";
+            } else if (userAgent.match(/safari/i)) {
+                browserName = "Safari";
+            } else if (userAgent.match(/opr\//i)) {
+                browserName = "Opera";
+            } else if (userAgent.match(/edg/i)) {
+                browserName = "Edge";
+            } else {
+                browserName = "Unknown";
+            }
+            
+            return browserName;
+        }
+    </script>
 </body>
 </html>
