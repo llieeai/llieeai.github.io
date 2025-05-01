@@ -372,7 +372,7 @@
             
             <p>My research focuses on advancing <strong class="highlight">Efficient Machine Learning and Large Language Models </strong>  to make AGI smaller, faster, greener and cheaper via novel compression techniques:</p>
             
-            <p><strong class="highlight">Efficient Mixture-of-Experts (MoE):</strong> MoE-SVD; D2-MoE</p>
+            <p><strong class="highlight">Efficient Mixture-of-Experts (MoE):</strong> MoE-SVD  (ICML'25); D2-MoE  (ICML'25)</p>
             
             <p><strong class="highlight">Efficient  Large Language Models:</strong> Pruner-Zero (ICML'24), DSA (NeurIPS'24), ALS (NeurIPS'24), STBLLM (ICLR'25)</p>
             
@@ -385,7 +385,7 @@
 
             
             <p style="color:#e74c3c; font-weight: 600; margin-top: 1rem;"> I'm on job market of both academics and industry for Spring 2026. Feel free to send me emails if we are a good fit!</p>
-                 <p>Selected preprints on Efficient MoE LLMs: </p>
+                 <p> There papers accepted by ICML 2025 (on Efficient MoE LLMs): </p>
              <div class="news-item">
                 <div class="news-date">2025-02</div>
                 <div><a href="https://arxiv.org/abs/2502.17298">Delta Decompression for MoE-based LLMs Compression</a></div>
@@ -400,7 +400,7 @@
 
 
 <div class="section">
-    <h2>First-author Publications (18)</h2>
+    <h2>First-author Publications (20)</h2>
     <h4>*: Co-first author, **: Corresponding author or project leadership</h4>
 
     <div class="filter-container" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 2rem; background-color: #f9f9f9; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
@@ -426,6 +426,37 @@
         </div>
     </div>
 
+
+        <div class="paper" data-year="2025" data-venue="icml">
+        <img class="paper-image" src="./moe-svd.png" alt="MoE-SVD: Structured Mixture-of-Experts LLMs Compression via Singular Value Decomposition">
+        <div class="paper-content">
+            <div class="paper-title">MoE-SVD: Structured Mixture-of-Experts LLMs Compression via Singular Value Decomposition</div>
+            <div class="paper-authors">Wei Li, <span class="highlight">Lujun Li*</span>, Hao Gu, You-Liang Huang, Mark G. Lee, Shengjie Sun, Wei Xue, Yike Guo</div>
+            <div class="paper-venue">Forty-second International Conference on Machine Learning (ICML-2025)</div>
+            <div class="paper-alert">CCF-A, Top Conference in Artificial Intelligence</div>
+            <div class="paper-links">
+                <a href="https://openreview.net/forum?id=ho7ZUS1z8A">Paper</a>
+                <a href="https://openreview.net/forum?id=ho7ZUS1z8A">Code</a>
+            </div>
+            <div class="paper-abstract">In this paper, we present a novel training-free compressor for MoE LLMs that uses SVD to break experts into smaller matrices, sharing and trimming them to save memory, speed up inference.</div>
+        </div>
+    </div>
+
+        <div class="paper" data-year="2025" data-venue="icml">
+        <img class="paper-image" src="./d2-moe.png" alt="Delta Decompression for MoE-based LLMs Compression">
+        <div class="paper-content">
+            <div class="paper-title">Delta Decompression for MoE-based LLMs Compressionn</div>
+            <div class="paper-authors"> Hao Gu, Wei Li, <span class="highlight">Lujun Li*</span>, Zhu Qiyuan, Mark G. Lee, Shengjie Sun, Wei Xue, Yike Guo</div>
+            <div class="paper-venue">Forty-second International Conference on Machine Learning (ICML-2025)</div>
+            <div class="paper-alert">CCF-A, Top Conference in Artificial Intelligence</div>
+            <div class="paper-links">
+                <a href="https://arxiv.org/abs/2502.17298">Paper</a>
+                <a href="https://github.com/lliai/D2MoE">Code</a>
+            </div>
+            <div class="paper-abstract">In this paper, we present D2-MoE, a new delta decompression  MoE compressor that decomposes expert weights into a shared base weight and unique delta weights..</div>
+        </div>
+    </div>
+    
     <div class="paper" data-year="2025" data-venue="iclr">
         <img class="paper-image" src="./stbllm.png" alt="STBLLM: Breaking the 1-Bit Barrier with Structured Binary LLMs">
         <div class="paper-content">
