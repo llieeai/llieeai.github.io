@@ -373,7 +373,7 @@
             <p>My research focuses on advancing <strong class="highlight">Efficient Machine Learning and Large Language Models </strong>  to make AGI smaller, faster, greener and cheaper via novel compression techniques:</p>
             
             <p><strong class="highlight">Efficient Mixture-of-Experts (MoE):</strong> MoE-SVD  (ICML'25); D2-MoE  (ICML'25)</p>
-            
+            <p><strong class="highlight">Efficient LLM Fine-tuning:</strong> NoRA (ICCV'25), AIRA (ICCV'25)</p>
             <p><strong class="highlight">Efficient  Large Language Models:</strong> Pruner-Zero (ICML'24), DSA (NeurIPS'24), ALS (NeurIPS'24), STBLLM (ICLR'25)</p>
             
             <p><strong class="highlight">Automated Efficient ML:</strong> EMQ (ICCV'23), ParZC (AAAI'25), AutoProx (AAAI'23), SasWOT (AAAI'23), Auto-GAS (ECCV'24), AttnZero (ECCV'24)</p>
@@ -384,15 +384,17 @@
             <p>I am/was the Area Chair for NeurIPS'25. ACM-MM'25, BMCV'24 and more. I am awarded the DAAD Postdoc-NeT-AI Fellowship in 2024. </p>
 
             
-            <p style="color:#e74c3c; font-weight: 600; margin-top: 1rem;"> I'm on job market of both academics and industry for Spring 2026. Feel free to send me emails if we are a good fit!</p>
-                 <p> There papers accepted by ICML 2025 (on Efficient MoE LLMs): </p>
+            <p style="color:#e74c3c; font-weight: 600; margin-top: 1rem;"> I'm on job market of  academics (Postdoc/Faculty) for Spring 2026. Feel free to send me emails if we are a good fit!</p>
+               <p style="color:#e74c3c; font-weight: 600; margin-top: 1rem;"> I'll be at ICML 25 in Vancouver (July 14-16) in person—happy to chat!</p>
+                 <p> News: Two papers accepted by ICCV'25 and there papers accepted by ICML'25 (on Efficient MoE LLMs): </p>
+             <p> Selected Preprints: </p>
              <div class="news-item">
-                <div class="news-date">2025-02</div>
-                <div><a href="https://arxiv.org/abs/2502.17298">Delta Decompression for MoE-based LLMs Compression</a></div>
+                <div class="news-date">2025-06</div>
+                <div><a href="https://arxiv.org/abs/2506.12040">BTC-LLM: Efficient Sub-1-Bit LLM Quantization via Learnable Transformation and Binary Codebook</a></div>
             </div>
             <div class="news-item">
-                <div class="news-date">2024-10</div>
-                <div><a href="https://openreview.net/forum?id=ho7ZUS1z8A">MoE-SVD: Structured Mixture-of-Experts LLMs Compression via Singular Value Decomposition</a></div>
+                <div class="news-date">2025-06</div>
+                <div><a href="https://openreview.net/pdf?id=BoORDPCHf0">Sub-MoE: Efficient Mixture-of-Expert LLMs Compression via Subspace Expert Merging</a></div>
             </div>
             
         </div>
@@ -400,7 +402,7 @@
 
 
 <div class="section">
-    <h2>First-author Publications (20)</h2>
+    <h2>First-author Publications (22)</h2>
     <h4>*: Co-first author, **: Corresponding author or project leadership</h4>
 
     <div class="filter-container" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 2rem; background-color: #f9f9f9; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
@@ -420,13 +422,47 @@
             <button class="filter-btn" data-filter="icml" style="padding: 0.5rem 1rem; background-color: #f5f7fa; color: #333; border: 1px solid #e0e0e0; border-radius: 20px; cursor: pointer; font-weight: 500; transition: all 0.3s;">ICML <span style="display: inline-flex; align-items: center; justify-content: center; background-color: #1772d0; color: white; border-radius: 12px; padding: 0.1rem 0.5rem; font-size: 0.8rem; margin-left: 0.3rem;">4</span></button>
             <button class="filter-btn" data-filter="iclr" style="padding: 0.5rem 1rem; background-color: #f5f7fa; color: #333; border: 1px solid #e0e0e0; border-radius: 20px; cursor: pointer; font-weight: 500; transition: all 0.3s;">ICLR <span style="display: inline-flex; align-items: center; justify-content: center; background-color: #1772d0; color: white; border-radius: 12px; padding: 0.1rem 0.5rem; font-size: 0.8rem; margin-left: 0.3rem;">2</span></button>
             <button class="filter-btn" data-filter="cvpr" style="padding: 0.5rem 1rem; background-color: #f5f7fa; color: #333; border: 1px solid #e0e0e0; border-radius: 20px; cursor: pointer; font-weight: 500; transition: all 0.3s;">CVPR <span style="display: inline-flex; align-items: center; justify-content: center; background-color: #1772d0; color: white; border-radius: 12px; padding: 0.1rem 0.5rem; font-size: 0.8rem; margin-left: 0.3rem;">1</span></button>
-            <button class="filter-btn" data-filter="iccv" style="padding: 0.5rem 1rem; background-color: #f5f7fa; color: #333; border: 1px solid #e0e0e0; border-radius: 20px; cursor: pointer; font-weight: 500; transition: all 0.3s;">ICCV <span style="display: inline-flex; align-items: center; justify-content: center; background-color: #1772d0; color: white; border-radius: 12px; padding: 0.1rem 0.5rem; font-size: 0.8rem; margin-left: 0.3rem;">2</span></button>
+            <button class="filter-btn" data-filter="iccv" style="padding: 0.5rem 1rem; background-color: #f5f7fa; color: #333; border: 1px solid #e0e0e0; border-radius: 20px; cursor: pointer; font-weight: 500; transition: all 0.3s;">ICCV <span style="display: inline-flex; align-items: center; justify-content: center; background-color: #1772d0; color: white; border-radius: 12px; padding: 0.1rem 0.5rem; font-size: 0.8rem; margin-left: 0.3rem;">4</span></button>
             <button class="filter-btn" data-filter="eccv" style="padding: 0.5rem 1rem; background-color: #f5f7fa; color: #333; border: 1px solid #e0e0e0; border-radius: 20px; cursor: pointer; font-weight: 500; transition: all 0.3s;">ECCV <span style="display: inline-flex; align-items: center; justify-content: center; background-color: #1772d0; color: white; border-radius: 12px; padding: 0.1rem 0.5rem; font-size: 0.8rem; margin-left: 0.3rem;">4</span></button>
             <button class="filter-btn" data-filter="aaai" style="padding: 0.5rem 1rem; background-color: #f5f7fa; color: #333; border: 1px solid #e0e0e0; border-radius: 20px; cursor: pointer; font-weight: 500; transition: all 0.3s;">AAAI <span style="display: inline-flex; align-items: center; justify-content: center; background-color: #1772d0; color: white; border-radius: 12px; padding: 0.1rem 0.5rem; font-size: 0.8rem; margin-left: 0.3rem;">3</span></button>
         </div>
     </div>
 
 
+
+        <div class="paper" data-year="2023" data-venue="iccv">
+        <img class="paper-image" src="./aira.png" alt="AIRA: Activation-Informed Low-Rank Adaptation for Large Models">
+        <div class="paper-content">
+            <div class="paper-title">AIRA: Activation-Informed Low-Rank Adaptation for Large Models</div>
+            <div class="paper-authors"><span class="highlight">Lujun Li</span>, Dezhi_Li, Cheng Lin, Wei Li, Wei Xue, Sirui Han, Yike Guo </div>
+            <div class="paper-venue">International Conference on Computer Vision (ICCV-2025)</div>
+            <div class="paper-alert">CCF-A, Top Conference in Computer Vision</div>
+            <div class="paper-links">
+                <a href="https://openreview.net/pdf?id=HCNTm4weS1">Paper</a>
+                <a href="https://github.com/lliai/Awesome-LoRA-Low-Rank-Adaptation">Code</a>
+            </div>
+            <div class="paper-abstract">AIRA introduces: (1) Outlier-weighted SVD  initialization, (2) Outlier-driven dynamic rank assignment, and (3) Activation-informed training.</div>
+        </div>
+    </div>
+
+           <div class="paper" data-year="2023" data-venue="iccv">
+        <img class="paper-image" src="./nora.png" alt="Efficient Fine-Tuning of Large Models via Nested Low-Rank Adaptation">
+        <div class="paper-content">
+            <div class="paper-title">Efficient Fine-Tuning of Large Models via Nested Low-Rank Adaptation</div>
+            <div class="paper-authors"><span class="highlight">Lujun Li</span>, Cheng Lin, Dezhi Li, You-Liang Huang, Wei Li, Tianyu Wu, Jie Zou, Wei Xue, Sirui Han, Yike Guo </div>
+            <div class="paper-venue">International Conference on Computer Vision (ICCV-2025)</div>
+            <div class="paper-alert">CCF-A, Top Conference in Computer Vision</div>
+            <div class="paper-links">
+                <a href="https://openreview.net/pdf?id=AMrRn1k2W4">Paper</a>
+                <a href="https://github.com/lliai/Awesome-LoRA-Low-Rank-Adaptation">Code</a>
+            </div>
+            <div class="paper-abstract">We present NoRA, a novel nested parameter-efficient LoRA structure, optimizes large model fine-tuning by employing serial structures.</div>
+        </div>
+    </div>
+
+    
+
+    
         <div class="paper" data-year="2025" data-venue="icml">
         <img class="paper-image" src="./moe-svd.png" alt="MoE-SVD: Structured Mixture-of-Experts LLMs Compression via Singular Value Decomposition">
         <div class="paper-content">
